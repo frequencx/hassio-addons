@@ -4,7 +4,7 @@ FROM $BUILD_FROM
 # Add env
 ENV LANG C.UTF-8
 
-#Install snapcast
+#Install snapcast from edge branch of alpinelinux
 RUN apk add --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/main/ snapcast bash alsa-plugins-pulse
 
 # Copy data for add-on
