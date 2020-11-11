@@ -4,7 +4,7 @@ FROM alpine:edge
 ENV LANG C.UTF-8
 
 #Install snapcast
-RUN apk add --no-cache snapcast bash alsa-plugins-pulse
+RUN apk add --no-cache snapcast avahi bash alsa-plugins-pulse
 
 # Copy data for add-on
 COPY run.sh /
