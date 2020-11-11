@@ -5,7 +5,9 @@ FROM $BUILD_FROM
 ENV LANG C.UTF-8
 
 #Install snapcast
-RUN apk add --no-cache snapcast@edge bash alsa-plugins-pulse
+RUN 
+cat /etc/apk/repositories
+apk add --no-cache snapcast@edge bash alsa-plugins-pulse
 
 # Copy data for add-on
 COPY run.sh /
