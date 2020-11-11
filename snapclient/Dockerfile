@@ -6,16 +6,8 @@ ENV LANG C.UTF-8
 
 #Install snapcast
 RUN apk add --no-cache bash alsa-plugins-pulse
-    apk update
+    apk add snapcast --update-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/community --allow-untrusted
     
-    cat > /etc/apk/repositories << EOF; $(echo)
-    @edge http://dl-cdn.alpinelinux.org/alpine/edge/main
-    @edgecommunity http://dl-cdn.alpinelinux.org/alpine/edge/community
-    EOF
-    
-    apk update
-    
-    apk add --no-cache snapcast@edgecommunity
  
 # Copy data for add-on
 COPY run.sh /
